@@ -1,0 +1,11 @@
+import org.clapper.argot.ArgotConverters._
+
+class CommandLineParser {
+
+	val parser = new ArgotParser(
+    "test",
+    preUsage=Some("ArgotTest: Version 0.1. Copyright (c) " +
+                  "2012, Brian M. Clapper. Pithy quotes go here.")
+  )
+	
+}
