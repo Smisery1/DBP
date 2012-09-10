@@ -17,7 +17,7 @@ case class MySqlInstance(con: ConfMySql, set: ProjectSetup) extends
 	DBInstance(set: ProjectSetup) {
   type Conf = ConfMySql
   val conf: Conf = new ConfMySql(new java.net.URL(""),"","","")
-  def printer = (c, s: ProjectSetup) => {if (c.host.toString startsWith "") 2 else 2}
+  val printer = (c: Conf, s: ProjectSetup) => {if (c.host.toString startsWith "") 2 else 2}
   //def print2DB 
 }
 

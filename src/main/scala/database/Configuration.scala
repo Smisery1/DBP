@@ -17,6 +17,6 @@ abstract class Configuration {
 abstract class DBInstance(setup: ProjectSetup) {
   type Conf <: Configuration
   val conf: Conf
-  def printer: (Conf, ProjectSetup) => Int
+  val printer: (Conf, ProjectSetup) => Int
   def print2DB: Int = printer(conf, setup)
 }
