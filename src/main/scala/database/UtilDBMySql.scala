@@ -1,7 +1,10 @@
 package database
 
-import central._
+import dbp._
 
+/**
+ * Factory methods for to manipulate a MySql instance
+ */
 object UtilDBMySql extends UtilDB {
 	type Conf = ConfMySql
 	def print2DB(conf: Conf, setup: ProjectSetup) = 2

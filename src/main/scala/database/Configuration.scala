@@ -1,5 +1,10 @@
 package database
 
+import dbp.{Main =>_, Manage =>_, CommandLineParser =>_, _}
+
+/**
+ * Provides essential information needed for any DB manipulation
+ */
 abstract class Configuration {
 	val host: java.net.URL
 	val username: String
@@ -7,4 +12,9 @@ abstract class Configuration {
 	val database: String
 	
 	def dbAdress = host.toString + "/" + database
+}
+
+abstract class DBInstance(setup: ProjectSetup) {
+  type Conf >: Configuration
+  val conf: Conf
 }
